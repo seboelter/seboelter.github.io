@@ -60,6 +60,7 @@ Video 2
 ### SPH Fluid Simulation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IKPuJWKERDY?si=KBbrufAoDlz34LIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
 Part 2 simmulates SPH Fluid Simmulation in a larger scene interacting with a beachball. Beachball floats and bounces in the top layer of water, showing it's difference in denisty from the water. This simmulation takes particles and applies physics to have them move simmilarly to water. This simulation is based loosly on the SPH/lagrangian fluid simulation linked from Canvas. 
 
 #### Physics Behind the Simulation
