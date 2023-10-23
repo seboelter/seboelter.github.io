@@ -2,7 +2,7 @@
 layout: default
 ---
 # CSCI 5611: Project 2
-Sarh Boelter and Ebasa Temesgen
+Sarah Boelter and Ebasa Temesgen
 ## Simulation Images
 ![Cloth](ArtContest1.png)
 
