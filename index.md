@@ -6,8 +6,15 @@ Sarh Boelter and Ebasa Temesgen
 ## Simulation Images
 ![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
 
+Link to image if image render doesn't work:
+https://drive.google.com/file/d/1E4QHEb0g1XGHctcMrsHKCAT4x7TE8Afi/view?usp=sharing
+
 
 ![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
+
+Link to image if image render doesn't work:
+
+https://drive.google.com/file/d/1DPNCxqSfVNAigiLj9vBzSBYSPvBlGnMS/view?usp=sharing
 
 
 
@@ -81,6 +88,14 @@ We ran into some difficulties getting the density and the near-neighbor pressure
 
 ![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
 
+Link to image if image render doesn't work:
+https://drive.google.com/file/d/1E4QHEb0g1XGHctcMrsHKCAT4x7TE8Afi/view?usp=sharing
+
 
 ![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
+
+
+Link to image if image render doesn't work:
+
+https://drive.google.com/file/d/1DPNCxqSfVNAigiLj9vBzSBYSPvBlGnMS/view?usp=sharing
 
