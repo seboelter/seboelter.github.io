@@ -3,7 +3,8 @@ layout: default
 ---
 # CSCI 5611: Project 2
 ## Simulation Images
-
+![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
+![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
 
 ## Features with Video and Descriptions
 
@@ -32,7 +33,5 @@ Clipart images.  Links cited in top of Fluid.pde
 
 ## Art Contest
 
-* * *
-
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
+![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
