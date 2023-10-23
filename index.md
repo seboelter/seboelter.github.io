@@ -76,4 +76,4 @@ We ran into some difficulties getting the density and the near-neighbor pressure
 ## Art Contest
 
 ![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
-![Beach](https://drive.google.com/file/d/1DPNCxqSfVNAigiLj9vBzSBYSPvBlGnMS/view?usp=sharing)
+![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
