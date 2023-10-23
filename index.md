@@ -5,12 +5,20 @@ layout: default
 ## Simulation Images
 
 
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
 ## Features with Video and Descriptions
-//https://youtu.be/gZQtXxkmfhg
+
+### Cloth
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gZQtXxkmfhg?si=qElGS82LpZJ9Dikd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Cloth Simulation - 65 Points
+3D Simuation - 10 Points
+High Quality Rendering- 5 Points
+Self Collisions - 10 Points
+
+### SPH Fluid Simulation
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IKPuJWKERDY?si=KBbrufAoDlz34LIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+SPH Fluid Simmulation in a larger scene interacting with a beachball. Beachball floats and bounces in the top layer of water.
 
 ## Writeup
 
@@ -19,13 +27,8 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 [Link to code repository for Cloth and SPH Fluid Simulation](https://github.com/seboelter/Animation-in-Games-Project-2).
 
 ## Libraries and Tools
-
-| Tool         | Purpose           | 
-|:-------------|:------------------|
-| ok           | good swedish fish |
-| out of stock | good and plenty   | 
-| ok           | good `oreos`      | 
-| ok           | good `zoute` drop | 
+PImage
+Clipart images.  Links cited in top of Fluid.pde
 
 ## Art Contest
 
