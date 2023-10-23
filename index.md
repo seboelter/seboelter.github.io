@@ -2,6 +2,7 @@
 layout: default
 ---
 # CSCI 5611: Project 2
+Sarh Boelter and Ebasa Temesgen
 ## Simulation Images
 ![Cloth](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest1.png)
 ![Beach](https://github.com/seboelter/seboelter.github.io/blob/master/ArtContest2.png)
