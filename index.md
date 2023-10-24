@@ -17,9 +17,17 @@ Sarah Boelter and Ebasa Temesgen
 Instructions for running simulations are located in gitHub readme in linked code below.
 
 ### Cloth
+
+#### Video 1
+[Link to Video 2 if it doesn't render](https://www.youtube.com/embed/gZQtXxkmfhg?si=qElGS82LpZJ9Dikd)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gZQtXxkmfhg?si=qElGS82LpZJ9Dikd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+#### Video 2
+[Link to Video 2 if it doesn't render](https://www.youtube.com/shorts/WignRsKkIOM)
 <iframe width="560" height="315" src="https://www.youtube.com/shorts/WignRsKkIOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 
 Part 1 simulates a 3D dynamic system involving a set of interconnected nodes (resembling a net or a piece of cloth) that interact with a movable spherical obstacle. The simulation leverages physical principles like gravitational force, spring forces, and damping. It includes 3D Visualization using Processing's P3D renderer for 3D graphics, Camera Controlsto navigate through the simulation scene using a flexible camera control, interactive obstacles by the obstacle with your mouse and have it interact with the nodes. 
