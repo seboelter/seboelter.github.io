@@ -7,25 +7,25 @@ Sarah Boelter and Simanta Barman
 ![IK](ArtContest1.png)
 
 
-![Beach]()
+![Crowd]()
 
 
 ## Features with Video and Descriptions
 
-
+TO DO IS UPDATE THE README
 Instructions for running simulations are located in gitHub readme in linked code below.
 
 ### Part 1: IK
 
 #### Video 1
-[Link to Video 2 if it doesn't render](https://youtu.be/sYhF_HGZLv0)
-<iframe width="560" height="315" src="https://youtu.be/sYhF_HGZLv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[Link to Video 2 if it doesn't render](https://www.youtube.com/embed/nQbxULdwHLg?si=wxOr16OzgcQNV0X6)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nQbxULdwHLg?si=wxOr16OzgcQNV0X6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 #### Video 2
-[Link to Video 2 if it doesn't render](https://youtu.be/nQbxULdwHLg)
+[Link to Video 2 if it doesn't render](https://www.youtube.com/embed/sYhF_HGZLv0?si=WjgDNno71lfsZW9R)
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/shorts/WignRsKkIOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-<iframe width="560" height="315" src="https://youtu.be/nQbxULdwHLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sYhF_HGZLv0?si=WjgDNno71lfsZW9R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
@@ -80,7 +80,7 @@ Will discuss issues in detail here
 ![IK](ArtContest1.png)
 
 
-![Beach]()
+![Crowd]()
 
 
 
