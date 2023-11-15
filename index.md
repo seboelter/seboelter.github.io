@@ -82,11 +82,40 @@ Video 2
 
 
 #### Description of Simulation and Key Functions
-* TBD
+Full crowd simulation:
+A variant of the multi-agent path finding problem (MAPF) is considered. The problem is to plan paths for a set of agents to a set of assigned goals while avoiding collisions. The environment is shared and therefore in addition to the static obstacles in the environment, the agents themselves act as dynamic obstacles. The agents are assigned a set of goals and once an agent reaches its current goal, a new goal is spawned in the environment and assigned to the agent. Each agent want to move to their current goal while avoiding static and dynamic collisions.
+
+Motion planning using probabilistic roadmap (PRM):
+First, the environment was created by placing random static obstacles. First, we generated all the circular obstacles. The first obstacle with a random radius was just placed in a random position inside the environment boundary. For the second obstacle, a random position and a radius were generated. Then whether the second circular obstacle intersected the first obstacle was checked. If no collision was detected then that obstacle was placed in the environment otherwise a new random position and radius were generated and this process was repeated until a valid obstacle was found. The same
+procedure was used to generate all the other circular obstacles. Then the rectangular obstacles were generated.
+
+Similarly, for a random rectangle all the other obstacles were checked for collision. If no collision was detected then the rectangle was placed in the environment. Otherwise, a new random rectangle was generated and this process was repeated. The agents' initial positions were also generated this way. For each agent, a set of random goals that did not intersect with any of the obstacles were generated. Then for each agent, a probabilistic roadmap was generated. The generation of the probabilistic roadmap is very similar. First, a set of points that did not intersect with any of the obstacles was generated. These points were used as the vertices of the PRM graph. The initial position of an agent and its goal position were also added to the set of vertices for the PRM graph for that agent. After that for each agent's PRM graph, the edges were connected. To connect the edges for a PRM graph, for each vertex in the set of vertices all other vertices that were less than $200$ pixels away were considered.
+
+For a pair of vertices if the line segment connecting the two vertices did not intersect with any of the obstacles then the two vertices were connected and an edge in the PRM graph was created. This process was repeated for all the vertices to construct the PRM graph. Using this PRM graph, performing breadth-first-search (BFS) from the agent's initial position to the goal position can be used to find a path for the agent to reach its goal.
+
+The BFS algorithm first marks all the vertices as unvisited and sets the parent node of all the vertices to $-1$. Then the first node or the agent's initial position is marked as visited and added to the fringe queue. Then until the goal node is found, the fringe queue is popped and the neighbors of the popped node are added to the fringe queue. The
+neighbor nodes' parent is then updated to the current node and then they are marked as visited. After the fringe is empty, using the parent node information starting from the goal node, the path from the agent's initial position to the goal can be constructed.
+
+Another way to find a path from the agent's initial position or the starting node to the goal node is just finding a random node in the PRM and then if the line segment connecting the starting node and the random node does not intersect any obstacle then add the random node to the path. Before adding the random node the path contained only the start node.
+After adding the random node, the last node in the path is the random node. Now the same process is repeated for finding another node in the PRM graph. When the path is of a certain length or when the random node is very close to the goal node, this process can be terminated to obtain a path from the start node to the goal node. Since we had to spawn new
+goals for the agents, we used this method. To demonstrate collision avoidance behavior we also skipped the ray intersection test before adding a random node to the path. This will be described further in the collision avoidance section. However, a complete BFS implementation to find a path in a PRM (taken from the class exercise) is included in
+our code. Furthermore, if moving an obstacle causes certain edges to be invalid in the PRM graph, then we also have code to fix and rebuild the PRM graph efficiently. The way this is implemented is by checking if any node intersects with the moving obstacle. If a node does intersect, then the node and the edges connected to the node are deleted from the PRM and a new valid node is added to the PRM graph with edges connecting it to neighboring nodes.
+
+Collision avoidance using time-to-collision (TTC) forces:
+For collision avoidance, we used the time-to-collision (TTC) forces. First, a sensing radius is defined for the agents. For each agent, we found all the agents that were less than this sensing radius away. In other words, we found all the neighboring agents within the sensing radius for each agent and stored them. Each agent has their own position, velocity and acceleration vectors. To move the agent we used Eulerian numerical integration: we first updated the velocity of each agent by adding acceleration vectors times time step to the velocity. Then we used the updated velocity and multiplied it with timestep and added it to the position vector. This updated the position of the agent. Before updating the positions of the agents we calculated the forces applied to each agent. The forces to be applied to each agent were stored as the acceleration at the previous time step. During the calculation of the forces, we considered the forces
+that would move the agents toward their goals and repel the agents from obstacles. To move an agent forward towards its goal we calculated the direction vector from the agent's current position to its goal position. This direction vector was used as the velocity vector for the agent after restricting the magnitude of the vector to the maximum predefined speed of the agent. Then the acceleration vector was calculated by subtracting the current velocity vector multiplied by a constant representing goal-seeking behavior, from this goal velocity vector.
+
+Very small goal velocity represents that the agent is already at the goal position. If an agent is not at their goal position then for all neighboring agents within the sensing radius future collisions are checked. To check for future collisions, the time-to-collision (TTC) is calculated. There will be a collision at time $t$ when the distance between the two agents is exactly equal to the sum of their radii, $|(x_B + v_B \tau) - (x_A + v_A \tau)| = r_A + r_B$. Squaring and expanding this equation results in $(v.v)\tau^2 + 2(w.v)\tau + w.w - (r_A + r_B)^2 = 0$ where $w = x_B - x_A$ and $v = v_B - v_A$. This equation now can be solved using the quadratic formula to obtain the time-to-collision. This operation is also similar to the ray circle intersection where the circle has the combined radius of both the agents' radii and the origin of the second agent and the ray has the same start as the current agent, the ray's direction is the relative velocity or the vector from the first agent to the second agent.
+If there will be a collision in the future the $\tau$ would have a valid positive value. Now after calculating the time-to-collision, if a collision is predicted in the future then the agent's direction can be changed to avoid the collision. This can be done by adding a constant that represents the collision repulsion behavior, divided by the
+time-to-collision to the vector from the current agent's future direction to the other agent's future direction. The relative future direction vector is first normalized before multiplying it with the collision repulsion constant divided by time-to-collision. This force is then added to the acceleration vector of the agent. This process is done for all the
+agents to ensure that the agents avoid collisions with each other.
 
 #### Attempted Point Breakdown
-
-* ...
+1. Complete Crowd Simulation
+2. Motion Planning with PRM
+3. Collision Avoidance with TTC
+4. Orientation of the agents visualized
+5. Resettable environment with changing target locations for agents
 
 ## Writeup
 
