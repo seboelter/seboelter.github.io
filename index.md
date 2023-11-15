@@ -17,6 +17,7 @@ Sarah Boelter and Simanta Barman
 
 Instructions for running simulations are located in gitHub readme in linked code below.
 
+
 ### Part 1: IK
 
 #### Video 1
