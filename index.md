@@ -93,15 +93,20 @@ time-to-collision to the vector from the current agent's future direction to the
 agents to ensure that the agents avoid collisions with each other.
 
 #### Attempted Point Breakdown
-1. Complete Crowd Simulation
-2. Motion Planning with PRM
-3. Collision Avoidance with TTC
-4. Orientation of the agents visualized
-5. Resettable environment with changing target locations for agents
+1. Complete Crowd Simulation - throughout the video
+2. Motion Planning with PRM - throughout the video
+3. Collision Avoidance with TTC - throughout the video
+4. Orientation of the agents visualized - throughout the video
+5. Resettable environment with changing target locations for agents - throughout the video
 
 ## Writeup
 
 Getting the IK simmulation was actually both really straightforward and very difficult.  We got a 3D version working fairly quickly, but struggled implementing angles in the Z direction while keeping the simmulation looking nice.  We eventually switched back to the 2D version of IK, which was much easier to work with, but We struggled getting collisions to work correctly.  Initially we thought it was my collision function so we tried doing several different shapes to do a workaround.  Eventually we realized that we weren't setting the arm back to the previous state if there was a collision, and only the state that had made it collide in the first place. 
+
+Using the TTC forces to avoid collisions required tuning the parameters a lot. Initially, the repulsion constant (k_avoid) was set to be lower than the goal-seeking (k_goal) constant. This resulted in the agents not avoiding each other at all and when they collided they would just disappear from the screen. Then reducing the k_goal resulted in
+agents not being able to reach and stay at their goals. They would just keep moving around their goals. Increasing the k_goal further fixed this issue. Further, after reaching their goals the agents were coded to stop participating in adjusting their positions due to TTC forces. This also ensured that collision avoidance forces would not move an agent
+after they reached their goals. For the other agents to ensure that with higher k_goal the agents still had proper collision avoidance, the k_avoid had to be increased again. The goal speed was also decreased to ensure that the agents did not move too fast. To avoid agents disappearing from the screen when they collided, circle-circle collision
+resolution technique was used. This made things more stable, however, at that point the collision avoidance code was working decently so collisions were not happening that much anyway.
 
 ## Code Location
 [Link to code repository for IK and Crowd Simmulation](https://github.com/seboelter/Project3).
